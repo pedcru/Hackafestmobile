@@ -6,9 +6,19 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="¿Para que se va a ocupar el crédito?" />
+        android:layout_height="35dp"
+        android:text="¿NUEVO REGISTRO SOLICITANTE?"
+        android:textColor="#1e1e1e"
+        style="@style/title" />
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Para que se va a ocupar el crédito?"
+        android:lineHeight="25px"
+        style="@style/subtitle"
+        />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -32,7 +42,9 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="¿cuanto tiempo de experiencia tiene en el area( agricola o ganadera )?" />
+        android:text="¿cuanto tiempo de experiencia tiene en el area( agricola o ganadera )?"
+        style="@style/subtitle"
+        />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -54,7 +66,9 @@
         android:id="@+id/textView34"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Anada una o varias referencias" />
+        android:text="Anada una o varias referencias"
+        style="@style/subtitle"
+        />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -102,7 +116,9 @@
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tipo de relación" />
+        android:text="Tipo de relación"
+        style="@style/subtitle"
+        />
 
 
 
@@ -138,6 +154,7 @@
 
     <Button
         android:id="@+id/button2"
+        style="@style/primarybutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ENVIAR" />
