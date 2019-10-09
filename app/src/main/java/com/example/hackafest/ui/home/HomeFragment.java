@@ -55,8 +55,9 @@ public class HomeFragment extends Fragment {
     }
 
     public void newApplicant(View v) {
-        GalleryFragment.GalleryData.getInstance().dato = "X";
         NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-        navController.navigate(R.id.nav_gallery);
+        navController.navigate(R.id.nav_slideshow);
  }
 }
+
+
