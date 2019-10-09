@@ -1,64 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#000"
-    android:fillViewport="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFF"
-        android:orientation="vertical"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp">
+        android:layout_height="wrap_content"
+        android:text="¿Para que se va a ocupar el crédito?" />
 
-        <com.google.android.material.textfield.TextInputLayout
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/first"
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/radio_pirates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agricultura"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_ninjas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ganadería"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿cuanto tiempo de experiencia tiene en el area( agricola o ganadera )?" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColorHint="#000">
+        <EditText
+            android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:textColorHint="#000">
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Ingresa tu nombre"
-                android:inputType="text"
-                android:maxLength="50"
-                android:singleLine="true"
-                android:textColor="#000"
-                android:textColorHighlight="#00ff4a"
-                android:textColorHint="#000"
-                android:textSize="18dp"
-                android:typeface="normal" />
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Anada una o varias referencias" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColorHint="#000">
+        <EditText
+            android:id="@+id/editTextNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp">
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Nombre" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/nuevo_solicitante"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:focusable="true"
-                android:gravity="top|left"
-                android:hint="Nuevo solicitante"
-                android:inputType="textMultiLine"
-                android:paddingTop="0dp"
-                android:scrollbars="vertical"
-                android:textColor="#000"
-                android:textColorHint="#000" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/checkButton"
-            android:layout_width="100dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+        <EditText
+            android:id="@+id/editTextDomicilio"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:text="Solicitar crédito" />
-    </LinearLayout>
-</ScrollView>
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Domicilio" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+    <EditText
+        android:id="@+id/editTextTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="telefono" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo de relación" />
+
+
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/first"
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/radio_familia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Familia"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_amigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amigo"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_socio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Socio"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_compañero_de_trabajo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Compañero de trabajo"
+            android:onClick="onRadioButtonClicked"/>
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ENVIAR" />
+
+
+</LinearLayout>
