@@ -32,17 +32,28 @@
 
         <Button
             android:id="@+id/buttonYes"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:onClick="YesMethod"
-            android:text="Sí"/>
-
+            android:onClick="newApplicant"
+            android:background="@drawable/my_button_bg"
+            android:textColor="#FFF"
+            android:angle="270"
+            android:layout_gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Sí" />
         <Button
             android:id="@+id/buttonNo"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:onClick="NoMethod"
-            android:text="No"/>
+            android:onClick="newApplicant"
+            android:background="@drawable/my_button_bg"
+            android:textColor="#FFF"
+            android:angle="270"
+            android:layout_gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="No" />
     </LinearLayout>
 
     <LinearLayout
