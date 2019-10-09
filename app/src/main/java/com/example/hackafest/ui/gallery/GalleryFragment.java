@@ -47,9 +47,9 @@ public class GalleryFragment extends Fragment {
         galleryViewModel =
                 ViewModelProviders.of(this).get(GalleryViewModel.class);
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-        texto_solicitante = root.findViewById(R.id.nuevo_solicitante);
+        //texto_solicitante = root.findViewById(R.id.nuevo_solicitante);
 
-        Button btn = (Button) root.findViewById(R.id.checkButton);
+        Button btn = (Button) root.findViewById(R.id.button2);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

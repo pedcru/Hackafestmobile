@@ -1,5 +1,6 @@
 package com.example.hackafest.ui;
 
+import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,10 +13,13 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.hackafest.MainActivity;
 import com.example.hackafest.R;
 import com.example.hackafest.SemanticModule;
 import com.example.hackafest.ui.gallery.GalleryViewModel;
@@ -33,6 +37,8 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ArrayList;
 
+import static android.Manifest.permission.RECORD_AUDIO;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.app.Activity.RESULT_OK;
 
 
@@ -53,14 +59,21 @@ public class AudioFragment extends Fragment {
         porcentajes = root.findViewById(R.id.porcentaje);
         mSpeakBtn =  (Button) root.findViewById(R.id.button);
 
-        Button btn = (Button) root.findViewById(R.id.checkButton);
-        btn.setOnClickListener(new View.OnClickListener() {
+        mSpeakBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startVoiceInput(v);
             }
         });
         return root;
+    }
+
+
+
+    public boolean CheckPermissions() {
+        int result = ContextCompat.checkSelfPermission(getContext(), WRITE_EXTERNAL_STORAGE);
+        int result1 = ContextCompat.checkSelfPermission(getContext(), RECORD_AUDIO);
+        return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED;
     }
 
 
