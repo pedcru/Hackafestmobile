@@ -1,27 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:paddingLeft="16dp"
-android:paddingRight="16dp"
-android:orientation="vertical" >
-<EditText
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="Ingresa tu nombre" />
-<EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="Ingresa tu edad" />
-<EditText
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1"
-    android:gravity="top"
-    android:hint="Ingresa un beso de ramón" />
-<Button
-    android:layout_width="100dp"
-    android:layout_height="wrap_content"
-    android:layout_gravity="right"
-    android:text="Guardar" />
-</LinearLayout>
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColorHint="#000">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingresa tu nombre"
+                android:inputType="text"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textColorHighlight="#00ff4a"
+                android:textColorHint="#000"
+                android:textSize="18dp"
+                android:typeface="normal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/nuevo_solicitante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:focusable="true"
+                android:gravity="top|left"
+                android:hint="Nuevo solicitante"
+                android:inputType="textMultiLine"
+                android:paddingTop="0dp"
+                android:scrollbars="vertical"
+                android:textColor="#000"
+                android:textColorHint="#000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/checkButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Solicitar crédito" />
+    </LinearLayout>
+</ScrollView>
