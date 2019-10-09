@@ -12,5 +12,6 @@
     <string name="menu_continue_applicant">Continuar evaluación</string>
     <string name="menu_references">Evaluación a referencias</string>
     <string name="menu_share">Share</string>
+    <string name="menu_audio">Nueva evaluación de solicitante con audio</string>
     <string name="menu_send">Send</string>
 </resources>
