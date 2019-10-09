@@ -3,16 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/container_fragment"
+    android:background="#FFF"
     android:orientation="vertical">
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,24 +18,56 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
-            android:src="@mipmap/aa" />
+            android:src="@mipmap/bannerprisa" />
     </LinearLayout>
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="20dp">
+    </Space>
     <Button
         android:id="@+id/newApplicantbutton"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:onClick="newApplicant"
-        android:text="Nueva evaluación a solicitante"/>
-
+        android:background="@drawable/my_button_bg"
+        android:textColor="#FFF"
+        android:angle="270"
+        android:layout_gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Nueva evaluación a solicitante" />
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="20dp">
+    </Space>
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Continuar evaluación"/>
+        android:onClick="newApplicant"
+        android:background="@drawable/my_button_bg"
+        android:textColor="#FFF"
+        android:angle="270"
+        android:layout_gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Continuar evaluación" />
+    <Space
+        android:layout_width="20dp"
+        android:layout_height="20dp">
+    </Space>
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:onClick="newApplicant"
+        android:background="@drawable/my_button_bg"
+        android:textColor="#FFF"
+        android:angle="270"
+        android:layout_gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
         android:text="Nueva evaluación a referencias" />
+
 </LinearLayout>
