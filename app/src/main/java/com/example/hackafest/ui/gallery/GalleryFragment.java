@@ -17,6 +17,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.example.hackafest.R;
 import com.example.hackafest.SemanticModule;
@@ -113,6 +115,8 @@ public class GalleryFragment extends Fragment {
         GalleryData.getInstance().negativo =  results.get(0) + "";
         GalleryData.getInstance().neutro =  results.get(1) + "";
         GalleryData.getInstance().positivo =  results.get(2) + "";
+        NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+        navController.navigate(R.id.nav_home);
 
     }
 }

@@ -39,7 +39,7 @@ public class HomeFragment extends Fragment {
         //final TextView textView = root.findViewById(R.id.text_home);
         Button btn = (Button) root.findViewById(R.id.newApplicantbutton);
         Button button2 = (Button) root.findViewById(R.id.button2);
-        Button button3 = (Button) root.findViewById(R.id.button2);
+        Button button3 = (Button) root.findViewById(R.id.button3);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +53,13 @@ public class HomeFragment extends Fragment {
                 test(v);
             }
         });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                referente(v);
+            }
+        });
         homeViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
@@ -64,7 +71,7 @@ public class HomeFragment extends Fragment {
 
     public void newApplicant(View v) {
         NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-        navController.navigate(R.id.nav_slideshow);
+        navController.navigate(R.id.nav_gallery);
  }
 
 
@@ -74,6 +81,10 @@ public class HomeFragment extends Fragment {
     }
 
 
+    public void referente(View v) {
+        NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+        navController.navigate(R.id.nav_slideshow);
+    }
 
 
 

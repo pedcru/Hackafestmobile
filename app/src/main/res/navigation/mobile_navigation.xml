@@ -35,6 +35,12 @@
         android:label="@string/menu_audio"
         tools:layout="@layout/fragment_audio" />
 
+    <fragment
+        android:id="@+id/nav_write"
+        android:name="com.example.hackafest.ui.WriteFragment"
+        android:label="@string/menu_escrito"
+        tools:layout="@layout/fragment_write" />
+
 
    <!-- <fragment
         android:id="@+id/nav_share"

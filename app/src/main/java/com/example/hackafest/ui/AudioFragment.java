@@ -45,8 +45,8 @@ import static android.app.Activity.RESULT_OK;
 
 
 public class AudioFragment extends Fragment {
-    private Button mSpeakBtn;
-    private TextView messagge, porcentajes;
+    private ImageButton mSpeakBtn ;
+    private TextView messagge, porcentajes, pregunta1;
     private static final int REQ_CODE_SPEECH_INPUT = 100;
 
     ArrayList<String> results= new ArrayList<>();
@@ -57,9 +57,13 @@ public class AudioFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_audio, container, false);
-        messagge = root.findViewById(R.id.textView);
+        messagge = root.findViewById(R.id.textView_answer);
         porcentajes = root.findViewById(R.id.porcentaje);
-        mSpeakBtn =  (Button) root.findViewById(R.id.button);
+        mSpeakBtn =  (ImageButton) root.findViewById(R.id.button);
+        pregunta1 = root.findViewById(R.id.textquestion);
+        pregunta1.setText("¿Le prestarías dinero a "+ GalleryFragment.GalleryData.getInstance().nombre+" y por qué?");
+
+
 
         imageViewFaceresult=(ImageView)root.findViewById(R.id.imageViewFaceResult);
 
@@ -92,33 +96,26 @@ public class AudioFragment extends Fragment {
 
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     messagge.setText((result.get(0)));
-
-
                     AssetManager mngr = getActivity().getAssets();
                     SemanticModule s = new SemanticModule();
                     s.createList(getActivity(),mngr);
                     results=s.getEmotionalValue(result.get(0));
                     porcentajes.setText("negativo: "+results.get(0)+"% neutral: "+results.get(1)+"% positivo: "+results.get(2));
 
-                    double dd= Double.parseDouble(results.get(0));
-                    if(Double.parseDouble(results.get(0))>Double.parseDouble(results.get(1)) &&
-                            Double.parseDouble(results.get(0))>Double.parseDouble(results.get(2))){//&& results.get(0)>results.get(3)
+                    if(Double.parseDouble(results.get(0))>Double.parseDouble(results.get(2))){//&& results.get(0)>results.get(3)
                         //carita negativa
                         imageViewFaceresult.setImageResource(R.mipmap.sad_face);
                     }
-                    else if(Double.parseDouble(results.get(1))>Double.parseDouble(results.get(0)) &&
-                            Double.parseDouble(results.get(1))>Double.parseDouble(results.get(2))){
+                    else if(Double.parseDouble(results.get(2))>Double.parseDouble(results.get(0))){
                         //carita neutra
-                        Log.d("tag","Application started ");
-                        imageViewFaceresult.setImageResource(R.mipmap.neutral_face);
-
-                    }
-                    else if(Double.parseDouble(results.get(2))>Double.parseDouble(results.get(0)) &&
-                            Double.parseDouble(results.get(2))>Double.parseDouble(results.get(1))){
-                        //carita positiva
                         imageViewFaceresult.setImageResource(R.mipmap.happy_face);
 
                     }
+                    else if(Double.parseDouble(results.get(0))==Double.parseDouble(results.get(2))){
+                        imageViewFaceresult.setImageResource(R.mipmap.neutral_face);
+
+                    }
+
 
 
 
@@ -143,7 +140,7 @@ public class AudioFragment extends Fragment {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "es-ES");
-        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Hello, How can I help you?");
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "¿Hola, cómo puedo ayudarte?");
         try {
             startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
         } catch (ActivityNotFoundException a) {

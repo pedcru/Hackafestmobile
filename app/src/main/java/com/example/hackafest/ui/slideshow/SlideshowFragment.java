@@ -50,7 +50,7 @@ public class SlideshowFragment extends Fragment {
     public void NoMethod(View v) {
        // GalleryFragment.GalleryData.getInstance().dato = "X";
         NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-        navController.navigate(R.id.nav_gallery);
+        navController.navigate(R.id.nav_write);
     }
 
     public void YesMethod(View v) {

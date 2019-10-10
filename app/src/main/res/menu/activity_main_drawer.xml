@@ -22,7 +22,7 @@
     <item android:title="Referencias">
         <menu>
             <item
-                android:id="@+id/nav_tools"
+                android:id="@+id/nav_write"
                 android:icon="@drawable/organization"
                 android:title="@string/menu_references" />
         </menu>
