@@ -2,6 +2,7 @@ package com.example.hackafest.ui;
 
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -36,8 +37,13 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.ArrayList;
+
+import lecho.lib.hellocharts.model.PieChartData;
+import lecho.lib.hellocharts.model.SliceValue;
+import lecho.lib.hellocharts.view.PieChartView;
 
 import static android.Manifest.permission.RECORD_AUDIO;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
@@ -52,6 +58,9 @@ public class AudioFragment extends Fragment {
     ArrayList<String> results= new ArrayList<>();
     ImageView imageViewFaceresult;
 
+    PieChartView pieChartView;
+    List<SliceValue> pieData = new ArrayList<>();
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -63,7 +72,7 @@ public class AudioFragment extends Fragment {
         pregunta1 = root.findViewById(R.id.textquestion);
         pregunta1.setText("¿Le prestarías dinero a "+ GalleryFragment.GalleryData.getInstance().nombre+" y por qué?");
 
-
+        pieChartView=root.findViewById(R.id.chart);
 
         imageViewFaceresult=(ImageView)root.findViewById(R.id.imageViewFaceResult);
 
@@ -105,17 +114,32 @@ public class AudioFragment extends Fragment {
                     if(Double.parseDouble(results.get(0))>Double.parseDouble(results.get(2))){//&& results.get(0)>results.get(3)
                         //carita negativa
                         imageViewFaceresult.setImageResource(R.mipmap.sad_face);
+                        pieData.add(new SliceValue(Float.parseFloat(results.get(0)), Color.RED));
+                        pieData.add(new SliceValue(Float.parseFloat(results.get(2)), Color.BLUE));
+                        PieChartData pieChartData= new PieChartData(pieData);
+                        pieChartView.setPieChartData(pieChartData);
+
                     }
                     else if(Double.parseDouble(results.get(2))>Double.parseDouble(results.get(0))){
-                        //carita neutra
+                        //carita feliz
                         imageViewFaceresult.setImageResource(R.mipmap.happy_face);
-
+                        pieData.add(new SliceValue(Float.parseFloat(results.get(0)), Color.RED));
+                        pieData.add(new SliceValue(Float.parseFloat(results.get(2)), Color.BLUE));
+                        PieChartData pieChartData= new PieChartData(pieData);
+                        pieChartView.setPieChartData(pieChartData);
                     }
                     else if(Double.parseDouble(results.get(0))==Double.parseDouble(results.get(2))){
+                        //carita neutral.
                         imageViewFaceresult.setImageResource(R.mipmap.neutral_face);
+                        pieData.add(new SliceValue(Float.parseFloat(results.get(0)), Color.RED));
+                        pieData.add(new SliceValue(Float.parseFloat(results.get(2)), Color.BLUE));
+                        PieChartData pieChartData= new PieChartData(pieData);
+                        pieChartView.setPieChartData(pieChartData);
 
                     }
-
+                    /*else if(Double.parseDouble(results.get(0))==0.0 && Double.parseDouble(results.get(2))==0.0){
+                        imageViewFaceresult.setImageResource(R.mipmap.neutral_face);
+                    }*/
 
 
 

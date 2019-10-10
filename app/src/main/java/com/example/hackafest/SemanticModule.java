@@ -164,19 +164,27 @@ public class SemanticModule {
 
 
 
-        int total=negative+neutral+positive;
+        int total=negative+positive;
         double x = Double.parseDouble(total+"");
         double Dnegative = Double.parseDouble(negative+"");
         double Dneutral=   Double.parseDouble(neutral+"");
         double Dpositive=Double.parseDouble(positive+"");
         double nn= Dnegative/x;
 
-        System.out.println("negativo: "+(Dnegative/x)*100+"% neutral: "+(Dneutral/x)*100+"% positivo: "+(Dpositive/x)*100+"% ");
+        System.out.println("negativo: "+(Dnegative/x)*100+"% positivo: "+(Dpositive/x)*100+"% ");
 
+        if((Dnegative==0.0 && x==0) &&(Dpositive==0.0)){
+            results.add("0");
+            results.add("0");
+            results.add("0");
 
-        results.add(""+(Dnegative/x)*100);
-        results.add(""+(Dneutral/x)*100);
-        results.add(""+(Dpositive/x)*100);
+        }
+        else{
+            results.add(""+(Dnegative/x)*100);
+            results.add(""+(Dneutral/x)*100);
+            results.add(""+(Dpositive/x)*100);
+        }
+
 
 
         return results;

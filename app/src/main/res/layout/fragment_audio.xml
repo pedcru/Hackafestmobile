@@ -55,19 +55,24 @@
 
     <ImageView
         android:id="@+id/imageViewFaceResult"
-        android:layout_width="wrap_content"
-        android:layout_height="400dp"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
         android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/porcentaje"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#1e1e1e"
-        android:textAlignment="center"
-        android:textSize="14dp"
         android:gravity="center"
-        android:text="" />
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#1e1e1e"
+        android:textSize="14dp" />
+
+    <lecho.lib.hellocharts.view.PieChartView
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
 </LinearLayout>
