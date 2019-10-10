@@ -100,7 +100,7 @@ public class AudioFragment extends Fragment {
                     SemanticModule s = new SemanticModule();
                     s.createList(getActivity(),mngr);
                     results=s.getEmotionalValue(result.get(0));
-                    porcentajes.setText("negativo: "+results.get(0)+"% neutral: "+results.get(1)+"% positivo: "+results.get(2));
+                    porcentajes.setText("negativo: "+results.get(0)+"% positivo: "+results.get(2)+"%");
 
                     if(Double.parseDouble(results.get(0))>Double.parseDouble(results.get(2))){//&& results.get(0)>results.get(3)
                         //carita negativa
