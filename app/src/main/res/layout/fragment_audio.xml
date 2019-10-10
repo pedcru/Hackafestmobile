@@ -6,32 +6,42 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="¿NUEVO REGISTRO SOLICITANTE?"
+        android:textColor="#1e1e1e"
+        style="@style/title" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/textView" />
+        android:text="¿Para qué va a ocupar el crédito?, Agricultura o ganadería "
+        style="@style/subtitle"
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿cuanto tiempo y experiencia tiene en el area( agricola o ganadera )?"
+        style="@style/subtitle"
+        />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        style="@style/primarybutton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"/>
+        android:text="Agregar Audio"
+
+        />
 
     <TextView
         android:id="@+id/porcentaje"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <ImageView
-        android:id="@+id/imageViewFaceResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars" />
-
+        android:text="P" />
 
 </LinearLayout>

@@ -43,7 +43,7 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="¿Cuánto tiempo de experiencia tiene en el área( agrícola o ganadera )?"
+        android:text="¿Cuánto tiempo y experiencia tiene en el area( agricola o ganadera )?"
         style="@style/subtitle"
         />
     <com.google.android.material.textfield.TextInputLayout
@@ -57,13 +57,13 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="" />
     </com.google.android.material.textfield.TextInputLayout>
     <TextView
         android:id="@+id/textView34"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Añada una o varias referencias"
+        android:text="Anada una referencia"
         style="@style/subtitle"
         />
 
@@ -78,33 +78,36 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Nombre" />
+            android:hint="Nombre" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="15dp"
+        android:textColorHint="#000"
+        >
         <EditText
             android:id="@+id/domicilio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Domicilio" />
+            android:hint="Domicilio" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="15dp"
+        android:textColorHint="#000">
     <EditText
         android:id="@+id/telefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="phone"
-        android:text="telefono" />
+        android:hint="Telefono" />
     </com.google.android.material.textfield.TextInputLayout>
     <TextView
         android:id="@+id/textView5"
