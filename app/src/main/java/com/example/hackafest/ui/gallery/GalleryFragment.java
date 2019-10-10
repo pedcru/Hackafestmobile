@@ -21,6 +21,8 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.hackafest.R;
 import com.example.hackafest.SemanticModule;
 
+import java.util.ArrayList;
+
 
 public class GalleryFragment extends Fragment {
 
@@ -30,6 +32,9 @@ public class GalleryFragment extends Fragment {
         public String telefono;
         public String direccion;
         public String parentesco;
+        public String neutro;
+        public String positivo;
+        public String negativo;
 
         public static GalleryData getInstance(){
             if(_instance == null){
@@ -45,12 +50,10 @@ public class GalleryFragment extends Fragment {
     private EditText editReferencia;
     private EditText editDomicilio;
     private EditText editTelefono;
-    public String dato;
     private RadioGroup radioGroup;
     private RadioButton radioButton;
     private RadioGroup radioGroupFamiliar;
     private RadioButton radioButtonFamiliar;
-    String texto1 = "";
     public View root;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -63,7 +66,7 @@ public class GalleryFragment extends Fragment {
         editReferencia = root.findViewById(R.id.referencias);
         editDomicilio = root.findViewById(R.id.domicilio);
         editTelefono = root.findViewById(R.id.telefono);
-        radioGroupFamiliar = (RadioGroup) root.findViewById(R.id.first);
+        radioGroupFamiliar = (RadioGroup) root.findViewById(R.id.familiar);
 
 
 
@@ -89,10 +92,10 @@ public class GalleryFragment extends Fragment {
         radioButtonFamiliar = (RadioButton) root.findViewById(selectedIdFam);
         //Log.d("tag","Application started "+  radioButton.getText());
         //Log.d("tag","Application started "+  editExperiencia.getText());
+        ArrayList<String> results= new ArrayList<String>();
 
 
         stringAnalyzed = radioButton.getText()+ " "+ editExperiencia.getText()+ " ";
-         ;
 
         GalleryData.getInstance().nombre = editReferencia.getText() + "";
         GalleryData.getInstance().telefono = editTelefono.getText() + "";
@@ -106,7 +109,10 @@ public class GalleryFragment extends Fragment {
         sm.createList(getActivity(),mngr);
         stringAnalyzed=stringAnalyzed.replaceAll(",","");
         stringAnalyzed=stringAnalyzed.replaceAll(";","");
-        sm.getEmotionalValue(stringAnalyzed.replaceAll(",","")+" ");
+        results = sm.getEmotionalValue(stringAnalyzed.replaceAll(",","")+" ");
+        GalleryData.getInstance().negativo =  results.get(0) + "";
+        GalleryData.getInstance().neutro =  results.get(1) + "";
+        GalleryData.getInstance().positivo =  results.get(2) + "";
 
     }
 }

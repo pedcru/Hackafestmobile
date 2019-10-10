@@ -2,6 +2,7 @@ package com.example.hackafest.ui.home;
 
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,17 +33,24 @@ public class HomeFragment extends Fragment {
 
 
 
-
-
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         //final TextView textView = root.findViewById(R.id.text_home);
         Button btn = (Button) root.findViewById(R.id.newApplicantbutton);
+        Button button2 = (Button) root.findViewById(R.id.button2);
+        Button button3 = (Button) root.findViewById(R.id.button2);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 newApplicant(v);
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                test(v);
             }
         });
         homeViewModel.getText().observe(this, new Observer<String>() {
@@ -58,6 +66,17 @@ public class HomeFragment extends Fragment {
         NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
         navController.navigate(R.id.nav_slideshow);
  }
+
+
+
+    public void test(View v) {
+        Log.d("tag","Application started "+   GalleryFragment.GalleryData.getInstance().neutro );
+    }
+
+
+
+
+
 }
 
 

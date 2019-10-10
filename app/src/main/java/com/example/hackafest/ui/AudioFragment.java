@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -48,7 +49,7 @@ public class AudioFragment extends Fragment {
     private static final int REQ_CODE_SPEECH_INPUT = 100;
 
     ArrayList<String> results= new ArrayList<>();
-
+    ImageView imageViewFaceresult;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -58,6 +59,8 @@ public class AudioFragment extends Fragment {
         messagge = root.findViewById(R.id.textView);
         porcentajes = root.findViewById(R.id.porcentaje);
         mSpeakBtn =  (Button) root.findViewById(R.id.button);
+
+        imageViewFaceresult=(ImageView)root.findViewById(R.id.imageViewFaceResult);
 
         mSpeakBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +96,27 @@ public class AudioFragment extends Fragment {
                     s.createList(getActivity(),mngr);
                     results=s.getEmotionalValue(result.get(0));
                     porcentajes.setText("negativo: "+results.get(0)+"% neutral: "+results.get(1)+"% positivo: "+results.get(2));
+
+                    double dd= Double.parseDouble(results.get(0));
+                    if(Double.parseDouble(results.get(0))>Double.parseDouble(results.get(1)) &&
+                            Double.parseDouble(results.get(0))>Double.parseDouble(results.get(2))){//&& results.get(0)>results.get(3)
+                        //carita negativa
+                        imageViewFaceresult.setImageResource(R.drawable.ic_menu_camera);
+                    }
+                    else if(Double.parseDouble(results.get(1))>Double.parseDouble(results.get(0)) &&
+                            Double.parseDouble(results.get(1))>Double.parseDouble(results.get(2))){
+                        //carita neutra
+                        imageViewFaceresult.setImageResource(R.drawable.ic_menu_send);
+
+                    }
+                    else if(Double.parseDouble(results.get(2))>Double.parseDouble(results.get(0)) &&
+                            Double.parseDouble(results.get(2))>Double.parseDouble(results.get(1))){
+                        //carita positiva
+                        imageViewFaceresult.setImageResource(R.drawable.my_button_bg);
+
+                    }
+
+
 
 
                 }

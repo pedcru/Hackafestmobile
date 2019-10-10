@@ -117,11 +117,12 @@
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:checkedButton="@+id/first"
+        android:id="@+id/familiar"
         android:orientation="vertical">
         <RadioButton android:id="@+id/radio_familia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="Familia"/>
         <RadioButton android:id="@+id/radio_amigo"
             android:layout_width="wrap_content"
@@ -131,11 +132,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Socio"/>
-        <RadioButton android:id="@+id/radio_compañero_de_trabajo"
+        <RadioButton android:id="@+id/radio_companero_de_trabajo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Compañero de trabajo"/>
     </RadioGroup>
+
+
     <Button
         android:id="@+id/button2"
         style="@style/primarybutton"
