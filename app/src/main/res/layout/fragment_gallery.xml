@@ -28,6 +28,26 @@
             android:textStyle="bold"
             />
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#000">
+
+            <EditText
+                android:id="@+id/nameproductor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:textSize="12dp"
+                android:hint="Nombre del productor"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="15dp">
+        </Space>
         <TextView
             android:id="@+id/textView6"
             android:textColor="#317c00"
@@ -58,7 +78,10 @@
                 android:text="Ganadería" />
 
         </RadioGroup>
-
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="15dp">
+        </Space>
         <TextView
             android:id="@+id/textView3"
             android:textSize="14dp"
@@ -70,18 +93,20 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:textColorHint="#000">
 
             <EditText
                 android:id="@+id/experiencia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:textSize="12dp"
                 android:inputType="textPersonName"
                 android:text="" />
         </com.google.android.material.textfield.TextInputLayout>
-
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="15dp">
+        </Space>
         <TextView
             android:id="@+id/textView34"
             android:textSize="14dp"
@@ -93,14 +118,14 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:textColorHint="#000">
 
             <EditText
                 android:id="@+id/referencias"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="5"
+                android:textSize="12dp"
                 android:hint="Nombre"
                 android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -108,14 +133,14 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:textColorHint="#000">
 
             <EditText
                 android:id="@+id/domicilio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="5"
+                android:textSize="12dp"
                 android:hint="Domicilio"
                 android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -123,18 +148,21 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:textColorHint="#000">
 
             <EditText
                 android:id="@+id/telefono"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="5"
+                android:textSize="12dp"
                 android:hint="Telefono"
                 android:inputType="phone" />
         </com.google.android.material.textfield.TextInputLayout>
-
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="15dp">
+        </Space>
         <TextView
             android:id="@+id/textView5"
             android:textSize="14dp"
@@ -175,7 +203,10 @@
                 android:text="Compañero de trabajo" />
         </RadioGroup>
     </LinearLayout>
-
+    <Space
+        android:layout_width="15dp"
+        android:layout_height="15dp">
+    </Space>
     <Button
         android:id="@+id/button2"
         style="@style/primarybutton"

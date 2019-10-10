@@ -3,27 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#FFF"
     android:layout_height="match_parent">
-
+    <Space
+        android:layout_width="10dp"
+        android:layout_height="10dp">
+    </Space>
     <TextView
         android:id="@+id/textquestion"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text=""
-        android:textSize="14dp"
-        android:textColor="#1e1e1e"/>
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tu respuesta"
+        android:textStyle="bold"
         android:textColor="#1e1e1e"
-        android:textSize="12dp"
-        android:id="@+id/textView_answer" />
-
-
-
+        android:textSize="18dp" />
+    <Space
+        android:layout_width="10dp"
+        android:layout_height="10dp">
+    </Space>
 
     <ImageButton
         android:id="@+id/button"
@@ -39,26 +37,37 @@
         android:scaleType="fitCenter"
         android:text="Captar respuesta" />
 
+
     <Space
         android:layout_width="10dp"
         android:layout_height="10dp">
     </Space>
-
     <TextView
-        android:id="@+id/porcentaje"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView_answer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:text="Tu respuesta"
         android:textColor="#1e1e1e"
-        android:textAlignment="center"
-        android:textSize="13dp"
-        android:text="" />
+        android:textSize="14dp" />
+
 
     <ImageView
         android:id="@+id/imageViewFaceResult"
         android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/porcentaje"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:textColor="#1e1e1e"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:text="" />
 
 
 </LinearLayout>
