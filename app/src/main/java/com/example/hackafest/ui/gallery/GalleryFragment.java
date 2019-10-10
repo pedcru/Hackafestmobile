@@ -35,6 +35,7 @@ public class GalleryFragment extends Fragment {
         public String direccion;
         public String parentesco;
         public String neutro;
+        public String referencia;
         public String positivo;
         public String negativo;
 
@@ -51,6 +52,7 @@ public class GalleryFragment extends Fragment {
     private EditText editExperiencia;
     private EditText editReferencia;
     private EditText editDomicilio;
+    private EditText editNameProductor;
     private EditText editTelefono;
     private RadioGroup radioGroup;
     private RadioButton radioButton;
@@ -66,6 +68,7 @@ public class GalleryFragment extends Fragment {
         radioGroup = (RadioGroup) root.findViewById(R.id.radio);
         editExperiencia = root.findViewById(R.id.experiencia);
         editReferencia = root.findViewById(R.id.referencias);
+        editNameProductor = root.findViewById(R.id.nameproductor);
         editDomicilio = root.findViewById(R.id.domicilio);
         editTelefono = root.findViewById(R.id.telefono);
         radioGroupFamiliar = (RadioGroup) root.findViewById(R.id.familiar);
@@ -99,7 +102,9 @@ public class GalleryFragment extends Fragment {
 
         stringAnalyzed = radioButton.getText()+ " "+ editExperiencia.getText()+ " ";
 
-        GalleryData.getInstance().nombre = editReferencia.getText() + "";
+        GalleryData.getInstance().nombre = editNameProductor.getText() + "";
+        GalleryData.getInstance().referencia = editReferencia.getText() + "";
+
         GalleryData.getInstance().telefono = editTelefono.getText() + "";
         GalleryData.getInstance().direccion = editDomicilio.getText()+ "";
         GalleryData.getInstance().parentesco = radioButtonFamiliar.getText() + "";
