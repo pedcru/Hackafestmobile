@@ -7,7 +7,7 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:text="¿NUEVO REGISTRO SOLICITANTE?"
+        android:text="¿Conoce a ?"
         android:textColor="#1e1e1e"
         style="@style/title" />
 
@@ -29,13 +29,13 @@
         <RadioButton android:id="@+id/radio_pirates"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Agricultura"
+            android:text="Si"
             android:checked="true"
             />
         <RadioButton android:id="@+id/radio_ninjas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ganadería"/>
+            android:text="No"/>
 
     </RadioGroup>
 
@@ -43,7 +43,7 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="¿Cuánto tiempo y experiencia tiene en el area( agricola o ganadera )?"
+        android:text="¿Qué opinión tiene de _____ ?"
         style="@style/subtitle"
         />
     <com.google.android.material.textfield.TextInputLayout
@@ -59,88 +59,70 @@
             android:inputType="textPersonName"
             android:text="" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
-        android:id="@+id/textView34"
+        android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Anada una referencia"
+        android:text="¿Qué tan responsable es ___ con su familia?"
         style="@style/subtitle"
         />
-
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:textColorHint="#000">
         <EditText
-            android:id="@+id/referencias"
+            android:id="@+id/familia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Nombre" />
+            android:text="" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:textColorHint="#000"
-        >
-        <EditText
-            android:id="@+id/domicilio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Domicilio" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:textColorHint="#000">
-        <EditText
-            android:id="@+id/telefono"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="phone"
-            android:hint="Telefono" />
-    </com.google.android.material.textfield.TextInputLayout>
     <TextView
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tipo de relación"
+        android:text="¿Qué tan responsable es ___ con su trabajo?"
+        style="@style/subtitle"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColorHint="#000">
+        <EditText
+            android:id="@+id/trabajo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Le prestarías dinero a ___?, y ¿Porque?"
         style="@style/subtitle"
         />
 
-    <RadioGroup
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/familiar"
-        android:orientation="vertical">
-        <RadioButton android:id="@+id/radio_familia"
-            android:layout_width="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColorHint="#000">
+        <EditText
+            android:id="@+id/prestar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Familia"/>
-        <RadioButton android:id="@+id/radio_amigo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Amigo"/>
-        <RadioButton android:id="@+id/radio_socio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Socio"/>
-        <RadioButton android:id="@+id/radio_companero_de_trabajo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Compañero de trabajo"/>
-    </RadioGroup>
-
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/button2"
