@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingLeft="22dp"
+    android:paddingRight="22dp"
+    >
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:text="¿Conoce a ?"
+        android:text="Registro de referencia"
         android:textColor="#1e1e1e"
-        style="@style/title" />
+        android:textSize="20dp"
+        android:textStyle="bold"
+        />
+
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="¿Para que se va a ocupar el crédito?"
+        android:text="¿Conoce a ?"
         android:lineHeight="25px"
+        android:layout_marginTop="5dp"
         style="@style/subtitle"
         />
     <RadioGroup
@@ -52,7 +59,7 @@
         android:layout_marginTop="15dp"
         android:textColorHint="#000">
         <EditText
-            android:id="@+id/experiencia"
+            android:id="@+id/opinion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
