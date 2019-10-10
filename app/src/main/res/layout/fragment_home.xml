@@ -14,10 +14,10 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="700dp"
+            android:layout_width="397dp"
+            android:layout_height="match_parent"
             android:adjustViewBounds="true"
-            android:scaleType="fitXY"
+            android:scaleType="centerCrop"
             android:src="@mipmap/bannerprisa" />
     </LinearLayout>
     <Space
