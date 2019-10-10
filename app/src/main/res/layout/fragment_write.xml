@@ -10,7 +10,7 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:text="Registro de referencia"
+        android:text="REGISTRO DE REFERENCIA"
         android:textColor="#1e1e1e"
         android:textSize="20dp"
         android:textStyle="bold"
