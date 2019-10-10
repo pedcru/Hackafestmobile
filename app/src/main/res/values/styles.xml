@@ -18,14 +18,12 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="title">
-        <item name="android:lineHeight">35px</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textSize">30px</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="subtitle">
-        <item name="android:lineHeight">25px</item>
         <item name="android:textColor">@color/colorPrimaryDark</item>
         <item name="android:textSize">22px</item>
         <item name="android:textStyle">bold</item>
