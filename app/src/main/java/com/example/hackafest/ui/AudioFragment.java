@@ -23,6 +23,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.hackafest.MainActivity;
 import com.example.hackafest.R;
 import com.example.hackafest.SemanticModule;
+import com.example.hackafest.ui.gallery.GalleryFragment;
 import com.example.hackafest.ui.gallery.GalleryViewModel;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -87,6 +88,8 @@ public class AudioFragment extends Fragment {
         switch (requestCode) {
             case REQ_CODE_SPEECH_INPUT: {
                 if (resultCode == RESULT_OK && null != data) {
+
+
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     messagge.setText((result.get(0)));
 
@@ -101,18 +104,19 @@ public class AudioFragment extends Fragment {
                     if(Double.parseDouble(results.get(0))>Double.parseDouble(results.get(1)) &&
                             Double.parseDouble(results.get(0))>Double.parseDouble(results.get(2))){//&& results.get(0)>results.get(3)
                         //carita negativa
-                        imageViewFaceresult.setImageResource(R.drawable.ic_menu_camera);
+                        imageViewFaceresult.setImageResource(R.mipmap.sad_face);
                     }
                     else if(Double.parseDouble(results.get(1))>Double.parseDouble(results.get(0)) &&
                             Double.parseDouble(results.get(1))>Double.parseDouble(results.get(2))){
                         //carita neutra
-                        imageViewFaceresult.setImageResource(R.drawable.ic_menu_send);
+                        Log.d("tag","Application started ");
+                        imageViewFaceresult.setImageResource(R.mipmap.neutral_face);
 
                     }
                     else if(Double.parseDouble(results.get(2))>Double.parseDouble(results.get(0)) &&
                             Double.parseDouble(results.get(2))>Double.parseDouble(results.get(1))){
                         //carita positiva
-                        imageViewFaceresult.setImageResource(R.drawable.my_button_bg);
+                        imageViewFaceresult.setImageResource(R.mipmap.happy_face);
 
                     }
 
@@ -125,6 +129,14 @@ public class AudioFragment extends Fragment {
 
         }
     }
+
+
+
+
+
+
+
+
 
 
     public void startVoiceInput(View v) {
