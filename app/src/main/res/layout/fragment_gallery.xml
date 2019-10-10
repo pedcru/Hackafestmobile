@@ -30,7 +30,7 @@
 
         <TextView
             android:id="@+id/textView6"
-            android:textColor="#1e1e1e"
+            android:textColor="#317c00"
             android:textSize="14dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,6 +64,7 @@
             android:textSize="14dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#317c00"
             android:text="¿Cuánto tiempo y experiencia tiene en el area( agricola o ganadera )?" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -84,6 +85,7 @@
         <TextView
             android:id="@+id/textView34"
             android:textSize="14dp"
+            android:textColor="#317c00"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Agrega una referencia" />
@@ -136,6 +138,7 @@
         <TextView
             android:id="@+id/textView5"
             android:textSize="14dp"
+            android:textColor="#317c00"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tipo de relación" />
